@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     var targetValue:Int = 0
     var roundValue = 0
     var score = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -65,8 +66,6 @@ class ViewController: UIViewController {
         print("Slider Value: \(currentValue)")
         
     }
-    
-    
     
     @IBAction func startOver(_ sender: Any) {
         startNewGame()
