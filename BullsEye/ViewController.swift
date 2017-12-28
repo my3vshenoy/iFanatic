@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class ViewController: UIViewController {
 //Created an outlet for slider object
@@ -75,6 +76,7 @@ class ViewController: UIViewController {
         score = 0
         roundValue = 0
         startNewRound()
+        addAnimation()
     }
     
     func startNewRound() {
@@ -111,5 +113,13 @@ class ViewController: UIViewController {
         let trackRightResizable =
             trackRightImage.resizableImage(withCapInsets: insets)
         sliderObj.setMaximumTrackImage(trackRightResizable, for: .normal)
+    }
+    
+    func addAnimation(){
+        let transition = CATransition()
+        transition.type = kCATransitionFade
+        transition.duration = 1
+        transition.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseOut)
+        view.layer.add(transition, forKey: nil)
     }
 }
