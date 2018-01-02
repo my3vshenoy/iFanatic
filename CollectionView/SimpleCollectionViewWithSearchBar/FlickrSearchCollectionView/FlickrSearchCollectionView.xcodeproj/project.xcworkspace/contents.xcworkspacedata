@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:../FlickrSearchCollectionView/Flickr.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../FlickrSearchCollectionView/FlickrPhoto.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../FlickrSearchCollectionView/FlickrSearchResults.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
+   </FileRef>
+</Workspace>
