@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,11 +20,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dev_Profile_My3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my3BG" translatesAutoresizingMaskIntoConstraints="NO" id="Slp-D8-WJS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="141"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="141"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="141" id="XxY-kP-O7Y"/>
                                 </constraints>
@@ -37,13 +37,14 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mythri Shenoy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfb-1v-Xdb">
-                                <rect key="frame" x="124" y="155" width="144" height="30.5"/>
+                                <rect key="frame" x="128" y="155" width="144" height="30.5"/>
+                                <viewLayoutGuide key="safeArea" id="5Zh-ms-iyO"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="sZB-z5-VVQ">
-                                <rect key="frame" x="81.5" y="246" width="212" height="58"/>
+                                <rect key="frame" x="278" y="246" width="212" height="58"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2g-0V-0WP">
                                         <rect key="frame" x="0.0" y="0.0" width="58" height="58"/>
@@ -64,7 +65,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Kxn-i9-kfA">
-                                <rect key="frame" x="47.5" y="328" width="280" height="130"/>
+                                <rect key="frame" x="244" y="328" width="280" height="130"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Data Image" translatesAutoresizingMaskIntoConstraints="NO" id="auY-Cn-9ul">
                                         <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
@@ -83,7 +84,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4fg-yz-GsG">
-                                <rect key="frame" x="47" y="484" width="280" height="130"/>
+                                <rect key="frame" x="244" y="484" width="280" height="130"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Videos Image" translatesAutoresizingMaskIntoConstraints="NO" id="cNL-HG-toJ">
                                         <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
@@ -107,7 +108,7 @@
                             <constraint firstItem="sZB-z5-VVQ" firstAttribute="top" secondItem="qsT-Bt-MPh" secondAttribute="bottom" constant="26" id="6Dy-KZ-MrN"/>
                             <constraint firstItem="Slp-D8-WJS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jjf-P9-Sm5"/>
                             <constraint firstItem="Kxn-i9-kfA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kze-Lf-cAr"/>
-                            <constraint firstItem="sfb-1v-Xdb" firstAttribute="leading" secondItem="qsT-Bt-MPh" secondAttribute="trailing" constant="16" id="RKu-9s-gjb"/>
+                            <constraint firstItem="sfb-1v-Xdb" firstAttribute="leading" secondItem="qsT-Bt-MPh" secondAttribute="trailing" constant="20" id="RKu-9s-gjb"/>
                             <constraint firstItem="4fg-yz-GsG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VSX-IW-GlV"/>
                             <constraint firstItem="sZB-z5-VVQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WE4-0D-hAy"/>
                             <constraint firstItem="Slp-D8-WJS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ZSj-id-hOy"/>
@@ -119,6 +120,16 @@
                             <constraint firstItem="Kxn-i9-kfA" firstAttribute="top" secondItem="sZB-z5-VVQ" secondAttribute="bottom" constant="24" id="ynQ-D9-yd2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="sfb-1v-Xdb"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="sfb-1v-Xdb"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
