@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		213CEAC92004220900DEEF12 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213CEAC82004220900DEEF12 /* SWRevealViewController.m */; };
 		2148EEDA2004164D003935D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2148EED92004164D003935D1 /* AppDelegate.swift */; };
 		2148EEDC2004164D003935D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2148EEDB2004164D003935D1 /* ViewController.swift */; };
 		2148EEDF2004164D003935D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2148EEDD2004164D003935D1 /* Main.storyboard */; };
 		2148EEE12004164D003935D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2148EEE02004164D003935D1 /* Assets.xcassets */; };
 		2148EEE42004164D003935D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2148EEE22004164D003935D1 /* LaunchScreen.storyboard */; };
+		41ED2AC573DD51D3E9E56195 /* Pods_Shack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2F80CCE72005092BA10B25 /* Pods_Shack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		213CEAC62004220700DEEF12 /* Shack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shack-Bridging-Header.h"; sourceTree = "<group>"; };
+		213CEAC72004220900DEEF12 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		213CEAC82004220900DEEF12 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		2148EED62004164D003935D1 /* Shack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2148EED92004164D003935D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2148EEDB2004164D003935D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		2148EEE02004164D003935D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2148EEE32004164D003935D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2148EEE52004164D003935D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A55A79C1C53E457CC59B2965 /* Pods-Shack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shack/Pods-Shack.debug.xcconfig"; sourceTree = "<group>"; };
+		CA8F045710DE7C9997A1BCB9 /* Pods-Shack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shack/Pods-Shack.release.xcconfig"; sourceTree = "<group>"; };
+		CD2F80CCE72005092BA10B25 /* Pods_Shack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41ED2AC573DD51D3E9E56195 /* Pods_Shack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		213CEAC5200421DE00DEEF12 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				213CEAC72004220900DEEF12 /* SWRevealViewController.h */,
+				213CEAC82004220900DEEF12 /* SWRevealViewController.m */,
+				213CEAC62004220700DEEF12 /* Shack-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		2148EECD2004164D003935D1 = {
 			isa = PBXGroup;
 			children = (
+				213CEAC5200421DE00DEEF12 /* Supporting Files */,
 				2148EED82004164D003935D1 /* Shack */,
 				2148EED72004164D003935D1 /* Products */,
+				AC1F787A7E1095C0DBD5623B /* Pods */,
+				FE0CBBF17396F9392DC4D18C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +86,23 @@
 			path = Shack;
 			sourceTree = "<group>";
 		};
+		AC1F787A7E1095C0DBD5623B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A55A79C1C53E457CC59B2965 /* Pods-Shack.debug.xcconfig */,
+				CA8F045710DE7C9997A1BCB9 /* Pods-Shack.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FE0CBBF17396F9392DC4D18C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD2F80CCE72005092BA10B25 /* Pods_Shack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2148EEE82004164D003935D1 /* Build configuration list for PBXNativeTarget "Shack" */;
 			buildPhases = (
+				DA8E0B1DF039827F2F834AE6 /* [CP] Check Pods Manifest.lock */,
 				2148EED22004164D003935D1 /* Sources */,
 				2148EED32004164D003935D1 /* Frameworks */,
 				2148EED42004164D003935D1 /* Resources */,
+				A2CD4BD3700A41C20BFE7954 /* [CP] Embed Pods Frameworks */,
+				4429B5D4E33D8F4F1D84FDD4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +138,7 @@
 				TargetAttributes = {
 					2148EED52004164D003935D1 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +174,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4429B5D4E33D8F4F1D84FDD4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shack/Pods-Shack-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2CD4BD3700A41C20BFE7954 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shack/Pods-Shack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA8E0B1DF039827F2F834AE6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2148EED22004164D003935D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -138,6 +229,7 @@
 			files = (
 				2148EEDC2004164D003935D1 /* ViewController.swift in Sources */,
 				2148EEDA2004164D003935D1 /* AppDelegate.swift in Sources */,
+				213CEAC92004220900DEEF12 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,13 +364,17 @@
 		};
 		2148EEE92004164D003935D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A55A79C1C53E457CC59B2965 /* Pods-Shack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Shack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aarven.Shack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/Shack-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -286,13 +382,16 @@
 		};
 		2148EEEA2004164D003935D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA8F045710DE7C9997A1BCB9 /* Pods-Shack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Shack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aarven.Shack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/Shack-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
