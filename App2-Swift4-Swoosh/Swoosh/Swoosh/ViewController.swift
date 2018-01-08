@@ -9,10 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var swooshLogoImg: UIImageView!
+    @IBOutlet weak var bgImgView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //Manual setting of view layout for learning purpose
+        swooshLogoImg.frame = CGRect(x: view.frame.size.width/2 - self.swooshLogoImg.frame.size.width/2, y: 50, width: self.swooshLogoImg.frame.size.width, height: self.swooshLogoImg.frame.size.height)
+        self.bgImgView.frame = view.frame
     }
 
     override func didReceiveMemoryWarning() {
