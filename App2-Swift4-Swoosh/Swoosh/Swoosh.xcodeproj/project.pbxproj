@@ -15,6 +15,7 @@
 		2148EEA12003B611003935D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2148EEA02003B611003935D1 /* Main.storyboard */; };
 		2148EEA72003F209003935D1 /* LeagueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2148EEA62003F209003935D1 /* LeagueVC.swift */; };
 		2148EEA92003F21C003935D1 /* SkillVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2148EEA82003F21C003935D1 /* SkillVC.swift */; };
+		2148EEAD2003FC21003935D1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2148EEAC2003FC21003935D1 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2148EEA02003B611003935D1 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Swoosh/View/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		2148EEA62003F209003935D1 /* LeagueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueVC.swift; sourceTree = "<group>"; };
 		2148EEA82003F21C003935D1 /* SkillVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillVC.swift; sourceTree = "<group>"; };
+		2148EEAC2003FC21003935D1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		213299CC20006DAE006F84BE /* Swoosh */ = {
 			isa = PBXGroup;
 			children = (
+				2148EEAB2003FC02003935D1 /* Model */,
 				213299D920006DAF006F84BE /* Info.plist */,
 				2148EEA32003F1A9003935D1 /* View Controller */,
 				2148EEA22003F188003935D1 /* View */,
@@ -87,6 +90,14 @@
 				2148EEA82003F21C003935D1 /* SkillVC.swift */,
 			);
 			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		2148EEAB2003FC02003935D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2148EEAC2003FC21003935D1 /* Player.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 				2148EEA72003F209003935D1 /* LeagueVC.swift in Sources */,
 				213299CE20006DAE006F84BE /* AppDelegate.swift in Sources */,
 				2148EEA92003F21C003935D1 /* SkillVC.swift in Sources */,
+				2148EEAD2003FC21003935D1 /* Player.swift in Sources */,
 				213299E020012A6C006F84BE /* BorderButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
