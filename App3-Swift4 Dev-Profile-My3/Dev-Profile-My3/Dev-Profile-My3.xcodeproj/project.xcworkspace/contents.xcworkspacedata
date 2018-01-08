@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/my3shenoy/Documents/WorkSpace/Projects/App3-Swift4 Dev-Profile-My3/Dev-Profile-My3/Dev-Profile-My3/Main.storyboard">
+   </FileRef>
+   <FileRef
       location = "self:Dev-Profile-My3.xcodeproj">
    </FileRef>
 </Workspace>
