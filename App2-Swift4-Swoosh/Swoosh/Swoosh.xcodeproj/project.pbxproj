@@ -60,6 +60,7 @@
 		213299CC20006DAE006F84BE /* Swoosh */ = {
 			isa = PBXGroup;
 			children = (
+				213299D920006DAF006F84BE /* Info.plist */,
 				2148EEA32003F1A9003935D1 /* View Controller */,
 				2148EEA22003F188003935D1 /* View */,
 			);
@@ -69,7 +70,6 @@
 		2148EEA22003F188003935D1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				213299D920006DAF006F84BE /* Info.plist */,
 				213299CD20006DAE006F84BE /* AppDelegate.swift */,
 				213299DF20012A6C006F84BE /* BorderButton.swift */,
 				2148EEA02003B611003935D1 /* Main.storyboard */,

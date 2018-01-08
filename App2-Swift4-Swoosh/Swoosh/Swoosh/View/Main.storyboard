@@ -179,6 +179,10 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextButtonTapped:" destination="ALG-7G-7hx" eventType="touchUpInside" id="WT2-Wn-VM5"/>
+                                    <segue destination="ss7-gw-aeW" kind="show" identifier="SkillVCSegue" id="Udv-6s-ovl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BR4-0I-Ali">
                                 <rect key="frame" x="16" y="30" width="29" height="24"/>
