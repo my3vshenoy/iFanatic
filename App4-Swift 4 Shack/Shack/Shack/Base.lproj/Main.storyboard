@@ -11,6 +11,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="Avenir.ttc">
+            <string>Avenir-Heavy</string>
             <string>Avenir-Medium</string>
         </array>
     </customFonts>
@@ -41,7 +42,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPp-63-afe">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPp-63-afe" customClass="GradientView" customModule="Shack" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFx-W6-sK1">
@@ -89,10 +90,64 @@
         <scene sceneID="jda-x1-9HC">
             <objects>
                 <viewController id="d9L-hk-wmG" customClass="ChannelVC" customModule="Shack" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CDl-Ts-QP2">
+                    <view key="view" contentMode="scaleToFill" id="CDl-Ts-QP2" customClass="GradientView" customModule="Shack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jw8-e6-ChA">
+                                <rect key="frame" x="281" y="83" width="22" height="22"/>
+                                <state key="normal" image="addChannelButton"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="q21-vJ-vzy">
+                                <rect key="frame" x="16" y="567" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="iY3-Va-HPj"/>
+                                    <constraint firstAttribute="width" constant="75" id="tW9-6q-WZa"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbI-FE-fzg">
+                                <rect key="frame" x="16" y="44" width="46" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Shack">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJn-ue-B8e">
+                                <rect key="frame" x="16" y="80" width="66" height="29"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                                <state key="normal" title="CHANNELS">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rvk-UN-tVE">
+                                <rect key="frame" x="0.0" y="129" width="375" height="418"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAm-yY-k1o">
+                                <rect key="frame" x="111" y="586" width="45" height="36"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="gDZ-t1-n9g" firstAttribute="bottom" secondItem="q21-vJ-vzy" secondAttribute="bottom" constant="25" id="0Ju-ZH-tFL"/>
+                            <constraint firstItem="TbI-FE-fzg" firstAttribute="top" secondItem="gDZ-t1-n9g" secondAttribute="top" constant="24" id="0s7-5R-0DG"/>
+                            <constraint firstItem="jw8-e6-ChA" firstAttribute="centerY" secondItem="CJn-ue-B8e" secondAttribute="centerY" id="15s-Zk-pfl"/>
+                            <constraint firstItem="CJn-ue-B8e" firstAttribute="top" secondItem="TbI-FE-fzg" secondAttribute="bottom" id="FNo-kU-wBB"/>
+                            <constraint firstItem="CJn-ue-B8e" firstAttribute="leading" secondItem="gDZ-t1-n9g" secondAttribute="leading" constant="16" id="JGu-wc-er3"/>
+                            <constraint firstItem="TbI-FE-fzg" firstAttribute="leading" secondItem="gDZ-t1-n9g" secondAttribute="leading" constant="16" id="ODL-Ob-ez1"/>
+                            <constraint firstItem="nAm-yY-k1o" firstAttribute="leading" secondItem="q21-vJ-vzy" secondAttribute="trailing" constant="20" id="ROk-hP-oXG"/>
+                            <constraint firstItem="nAm-yY-k1o" firstAttribute="centerY" secondItem="q21-vJ-vzy" secondAttribute="centerY" id="VcP-Fc-c5D"/>
+                            <constraint firstItem="rvk-UN-tVE" firstAttribute="top" secondItem="CJn-ue-B8e" secondAttribute="bottom" constant="20" id="drS-eo-deK"/>
+                            <constraint firstItem="gDZ-t1-n9g" firstAttribute="trailing" secondItem="jw8-e6-ChA" secondAttribute="trailing" constant="72" id="i8j-vt-iRh"/>
+                            <constraint firstItem="rvk-UN-tVE" firstAttribute="leading" secondItem="gDZ-t1-n9g" secondAttribute="leading" id="ioU-7g-lve"/>
+                            <constraint firstItem="q21-vJ-vzy" firstAttribute="leading" secondItem="gDZ-t1-n9g" secondAttribute="leading" constant="16" id="n7a-s1-L3L"/>
+                            <constraint firstItem="gDZ-t1-n9g" firstAttribute="trailing" secondItem="rvk-UN-tVE" secondAttribute="trailing" id="pWy-rH-Qx8"/>
+                            <constraint firstItem="q21-vJ-vzy" firstAttribute="top" secondItem="rvk-UN-tVE" secondAttribute="bottom" constant="20" id="sPj-oU-Zkm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gDZ-t1-n9g"/>
                     </view>
                 </viewController>
@@ -102,6 +157,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addChannelButton" width="22" height="22"/>
+        <image name="profileDefault" width="192" height="192"/>
         <image name="smackBurger" width="40" height="40"/>
     </resources>
 </document>
