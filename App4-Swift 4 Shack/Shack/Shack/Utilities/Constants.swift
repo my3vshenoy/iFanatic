@@ -9,7 +9,7 @@
 import Foundation
 
 //MARK: URLs
-let BASE_URL: String = "https://shackslack.herokuapp.com/"
+let BASE_URL: String = "https://shackslack.herokuapp.com/v1"
 let URL_REGISTER: String = BASE_URL + "/account/register"
 
 

@@ -275,7 +275,7 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emp-px-1qh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emp-px-1qh" customClass="RoundedButton" customModule="Shack" customModuleProvider="target">
                                 <rect key="frame" x="62.5" y="313" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35907864570617676" green="0.62470054626464844" blue="0.79440629482269287" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -388,7 +388,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBl-SK-xsU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBl-SK-xsU" customClass="RoundedButton" customModule="Shack" customModuleProvider="target">
                                 <rect key="frame" x="62" y="597" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35907864569999998" green="0.62470054630000005" blue="0.79440629480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -422,7 +422,7 @@
                                     <color key="titleColor" red="0.35907864569999998" green="0.62470054630000005" blue="0.79440629480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="chooseAvatarButnPressed:" destination="ALL-kN-cPO" eventType="touchUpInside" id="xbS-qb-OT3"/>
+                                    <action selector="chooseAvatarBtnPressed:" destination="ALL-kN-cPO" eventType="touchUpInside" id="xbS-qb-OT3"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="e8k-H3-Okh">
@@ -465,6 +465,10 @@
                     </view>
                     <connections>
                         <outlet property="createAccountBtn" destination="YBl-SK-xsU" id="9gm-Ga-cD2"/>
+                        <outlet property="emailTxtField" destination="g8w-Kd-Jjn" id="163-ve-AKs"/>
+                        <outlet property="passwordTxtField" destination="bLA-T5-e4q" id="JHv-QG-wuq"/>
+                        <outlet property="profileImgView" destination="e8k-H3-Okh" id="B75-cj-6Sk"/>
+                        <outlet property="usernameTxtField" destination="F2e-Yb-coE" id="GMZ-GM-hv0"/>
                         <segue destination="cwQ-0N-9yg" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="9RD-A4-F4V"/>
                     </connections>
                 </viewController>
