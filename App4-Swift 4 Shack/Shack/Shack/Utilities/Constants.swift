@@ -8,4 +8,6 @@
 
 import Foundation
 
-let toLogin:String = "toLogin"
+let TO_LOGIN:String = "toLogin"
+let TO_CREATE_NEW_ACCOUNT = "toCreateNewAccount"
+let UNWIND = "unwindToChannel"
