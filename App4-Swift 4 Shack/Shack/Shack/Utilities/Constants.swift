@@ -11,6 +11,11 @@ import Foundation
 //MARK: URLs
 let BASE_URL: String = "https://shackslack.herokuapp.com/v1"
 let URL_REGISTER: String = BASE_URL + "/account/register"
+let URL_USER_LOGIN: String = BASE_URL + "/account/login"
+let URL_USER_ADD: String = BASE_URL + "/user/add"
+
+//MARK: Headers
+let HEADER = ["Content-Type": "application/json; charset=utf-8"]
 
 
 //MARK: Aliases

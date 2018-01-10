@@ -19,13 +19,18 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var passwordTxtField: UITextField!
     @IBOutlet weak var profileImgView: UIImageView!
     
+    //MARK: Variables
+    var avatarName = "profileDefault"
+    var avatarColor = "[0.5, 0.5, 0.5, 1]"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     //MARK: IBActions
     @IBAction func createAccountBtnPressed(_ sender: Any) {
-        guard let email = emailTxtField.text, emailTxtField.text != nil else {
+        
+        guard let email = self.emailTxtField.text, emailTxtField.text != nil else {
             return
         }
         
@@ -33,8 +38,23 @@ class SignUpVC: UIViewController {
             return
         }
         
-        AuthService.instance.registerUser(email: email, password: password) { (success) in
-            print("User registered successfully")
+        guard let username = self.usernameTxtField.text, usernameTxtField.text != nil else {
+            return
+        }
+        
+        AuthService.instance.registerUser(email: email, password: password)
+        { (success) in
+            if success{
+                AuthService.instance.loginUser(email: email, password: password, completion: { (success) in
+                    if success{
+                        AuthService.instance.createUser(name: username, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion:
+                            { (success) in
+                                print("Successfully created User")
+                                self.performSegue(withIdentifier: UNWIND, sender: nil)
+                        })
+                    }
+                })
+            }
         }
         
     }
