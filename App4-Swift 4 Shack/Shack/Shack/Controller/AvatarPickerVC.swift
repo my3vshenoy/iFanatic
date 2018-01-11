@@ -31,6 +31,15 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     @IBAction func segmentControlPressed(_ sender: Any) {
+        
+        if self.segmentControl.selectedSegmentIndex == 0{
+            avatarType = .dark
+        }
+        else{
+            avatarType = .light
+        }
+        collectionView.reloadData()
+        
     }
     
     //MARK: Collection View Protocols
@@ -50,6 +59,30 @@ class AvatarPickerVC: UIViewController, UICollectionViewDelegate, UICollectionVi
             return cell
         }
         return AvatarCVCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var numberOfColumns:CGFloat = 3
+        
+        if UIScreen.main.bounds.width > 320{
+            numberOfColumns = 4
+        }
+        
+        let spaceBetweenCells:CGFloat = 10.0
+        let padding: CGFloat = 40.0
+        let cellDimension = ((collectionView.bounds.width - padding) - (numberOfColumns-1) * spaceBetweenCells)/numberOfColumns
+        
+        return CGSize(width: cellDimension, height: cellDimension)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if avatarType == .dark{
+            UserDataService.instance.setAvatarName(name: "dark\(indexPath.item)")
+        }
+        else{
+            UserDataService.instance.setAvatarName(name: "light\(indexPath.item)")
+        }
+        self.dismiss(animated: true, completion: nil)
     }
     
     

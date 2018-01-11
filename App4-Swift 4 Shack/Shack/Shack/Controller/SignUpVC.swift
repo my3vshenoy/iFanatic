@@ -26,6 +26,13 @@ class SignUpVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDataService.instance.avatarName != ""{
+            self.profileImgView.image = UIImage(named: UserDataService.instance.avatarName)
+            self.avatarName = UserDataService.instance.avatarName
+        }
+    }
 
     //MARK: IBActions
     @IBAction func createAccountBtnPressed(_ sender: Any) {
