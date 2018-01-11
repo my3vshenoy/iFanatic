@@ -33,4 +33,10 @@ let TOKEN_KEY = "token"
 let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
 
+//MARK: Notification Constants
+let NOTIF_USER_DATA_CHANGED = Notification.Name("NotifUserDataChanged")
+
+//MARK: Colors
+let PLACEHOLDER_COLOR_PURPLE = #colorLiteral(red: 0.1960784314, green: 0.2618983388, blue: 0.7153298259, alpha: 0.5)
+
 
