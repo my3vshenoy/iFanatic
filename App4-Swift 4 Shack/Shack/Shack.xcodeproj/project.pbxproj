@@ -21,6 +21,8 @@
 		2148EEDF2004164D003935D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2148EEDD2004164D003935D1 /* Main.storyboard */; };
 		2148EEE12004164D003935D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2148EEE02004164D003935D1 /* Assets.xcassets */; };
 		2148EEE42004164D003935D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2148EEE22004164D003935D1 /* LaunchScreen.storyboard */; };
+		215007212005B4AA002ED6B6 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215007202005B4AA002ED6B6 /* AvatarPickerVC.swift */; };
+		215007232005C55D002ED6B6 /* AvatarCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215007222005C55D002ED6B6 /* AvatarCVCell.swift */; };
 		41ED2AC573DD51D3E9E56195 /* Pods_Shack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2F80CCE72005092BA10B25 /* Pods_Shack.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		2148EEE02004164D003935D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2148EEE32004164D003935D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2148EEE52004164D003935D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		215007202005B4AA002ED6B6 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
+		215007222005C55D002ED6B6 /* AvatarCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCVCell.swift; sourceTree = "<group>"; };
 		A55A79C1C53E457CC59B2965 /* Pods-Shack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shack/Pods-Shack.debug.xcconfig"; sourceTree = "<group>"; };
 		CA8F045710DE7C9997A1BCB9 /* Pods-Shack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shack/Pods-Shack.release.xcconfig"; sourceTree = "<group>"; };
 		CD2F80CCE72005092BA10B25 /* Pods_Shack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +86,7 @@
 			children = (
 				213CEAD82004570D00DEEF12 /* GradientView.swift */,
 				213CEAE62005766500DEEF12 /* RoundedButton.swift */,
+				215007222005C55D002ED6B6 /* AvatarCVCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 				213CEACF2004247900DEEF12 /* ChannelVC.swift */,
 				213CEADF200468E100DEEF12 /* LoginVC.swift */,
 				213CEAE12004775C00DEEF12 /* SignUpVC.swift */,
+				215007202005B4AA002ED6B6 /* AvatarPickerVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				213CEAE22004775C00DEEF12 /* SignUpVC.swift in Sources */,
+				215007212005B4AA002ED6B6 /* AvatarPickerVC.swift in Sources */,
 				213CEAE72005766500DEEF12 /* RoundedButton.swift in Sources */,
 				213CEAD02004247900DEEF12 /* ChannelVC.swift in Sources */,
 				213CEAE92005A5A200DEEF12 /* UserDataService.swift in Sources */,
@@ -302,6 +309,7 @@
 				2148EEDA2004164D003935D1 /* AppDelegate.swift in Sources */,
 				213CEAD6200427EC00DEEF12 /* SWRevealViewController.m in Sources */,
 				213CEADC2004615500DEEF12 /* Constants.swift in Sources */,
+				215007232005C55D002ED6B6 /* AvatarCVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,6 +25,7 @@ typealias CompletionHandler = (_ Success:Bool) -> () //Created an alias for a Cl
 let TO_LOGIN:String = "toLogin"
 let TO_CREATE_NEW_ACCOUNT = "toCreateNewAccount"
 let UNWIND = "unwindToChannel"
+let TO_CHOOSE_AVATAR = "toChooseAvatar"
 
 
 //MARK: UserDefaults

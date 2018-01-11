@@ -59,10 +59,13 @@ class SignUpVC: UIViewController {
         
     }
     
-    @IBAction func generateAvatarBtnPressed(_ sender: Any) {
+    @IBAction func generateAvatarColorBtnPressed(_ sender: Any) {
     }
     
     @IBAction func chooseAvatarBtnPressed(_ sender: Any) {
+        
+        performSegue(withIdentifier: TO_CHOOSE_AVATAR, sender: nil)
+        
     }
     
     @IBAction func closeBtnPressed(_ sender: Any) {

@@ -423,6 +423,7 @@
                                 </state>
                                 <connections>
                                     <action selector="chooseAvatarBtnPressed:" destination="ALL-kN-cPO" eventType="touchUpInside" id="xbS-qb-OT3"/>
+                                    <segue destination="b3y-Wb-U6w" kind="show" identifier="toChooseAvatar" id="vZe-kb-52N"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="e8k-H3-Okh">
@@ -440,7 +441,7 @@
                                 </state>
                                 <connections>
                                     <action selector="SignUpBtnPressed:" destination="rN7-x4-3Hx" eventType="touchUpInside" id="f8S-yB-XuP"/>
-                                    <action selector="generateAvatarBtnPressed:" destination="ALL-kN-cPO" eventType="touchUpInside" id="Uh3-be-7CK"/>
+                                    <action selector="generateAvatarColorBtnPressed:" destination="ALL-kN-cPO" eventType="touchUpInside" id="Uh3-be-7CK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -476,6 +477,98 @@
                 <exit id="cwQ-0N-9yg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3431" y="-403"/>
+        </scene>
+        <!--Avatar PickerVC-->
+        <scene sceneID="gj5-Pb-IEL">
+            <objects>
+                <viewController id="b3y-Wb-U6w" customClass="AvatarPickerVC" customModule="Shack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Shh-En-cE2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlA-er-ffG">
+                                <rect key="frame" x="16" y="20" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="bSe-Vs-hIM"/>
+                                    <constraint firstAttribute="height" constant="28" id="oax-RJ-O1f"/>
+                                </constraints>
+                                <state key="normal" image="closeButton"/>
+                                <connections>
+                                    <action selector="closeBtnPressed:" destination="ALL-kN-cPO" eventType="touchUpInside" id="JSM-wB-WmU"/>
+                                    <action selector="closeBtnPressed:" destination="b3y-Wb-U6w" eventType="touchUpInside" id="sYY-mB-j4S"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="A3x-FH-VNc">
+                                <rect key="frame" x="107.5" y="20" width="160" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="KJ1-oz-rIX"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Dark"/>
+                                    <segment title="Light"/>
+                                </segments>
+                                <color key="tintColor" red="0.35907864569999998" green="0.62470054630000005" blue="0.79440629480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentControlPressed:" destination="b3y-Wb-U6w" eventType="valueChanged" id="r88-W7-P2o"/>
+                                </connections>
+                            </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JJw-gH-iFx">
+                                <rect key="frame" x="20" y="68" width="335" height="599"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4cC-2g-fuV">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="avatarCell" id="tmz-XM-19E" customClass="AvatarCVCell" customModule="Shack" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tu7-kt-MA8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="tu7-kt-MA8" secondAttribute="trailing" id="MOg-fZ-nlt"/>
+                                            <constraint firstItem="tu7-kt-MA8" firstAttribute="top" secondItem="tmz-XM-19E" secondAttribute="top" id="XOj-Pg-Kzi"/>
+                                            <constraint firstItem="tu7-kt-MA8" firstAttribute="leading" secondItem="tmz-XM-19E" secondAttribute="leading" id="gQo-d4-hGf"/>
+                                            <constraint firstAttribute="bottom" secondItem="tu7-kt-MA8" secondAttribute="bottom" id="p7a-S1-LDv"/>
+                                        </constraints>
+                                        <size key="customSize" width="100" height="100"/>
+                                        <connections>
+                                            <outlet property="avatarImgView" destination="tu7-kt-MA8" id="XEl-rC-7h7"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JJw-gH-iFx" firstAttribute="top" secondItem="tlA-er-ffG" secondAttribute="bottom" constant="20" id="Mkj-ms-nWJ"/>
+                            <constraint firstItem="EBa-on-sVV" firstAttribute="trailing" secondItem="JJw-gH-iFx" secondAttribute="trailing" constant="20" id="NG5-Nt-p1U"/>
+                            <constraint firstItem="A3x-FH-VNc" firstAttribute="top" secondItem="EBa-on-sVV" secondAttribute="top" id="QHc-Xk-bpg"/>
+                            <constraint firstItem="JJw-gH-iFx" firstAttribute="leading" secondItem="EBa-on-sVV" secondAttribute="leading" constant="20" id="Z0N-0R-1Bg"/>
+                            <constraint firstItem="tlA-er-ffG" firstAttribute="leading" secondItem="EBa-on-sVV" secondAttribute="leading" constant="16" id="kxX-X2-rhF"/>
+                            <constraint firstItem="A3x-FH-VNc" firstAttribute="centerX" secondItem="Shh-En-cE2" secondAttribute="centerX" id="n72-42-W0h"/>
+                            <constraint firstItem="EBa-on-sVV" firstAttribute="bottom" secondItem="JJw-gH-iFx" secondAttribute="bottom" id="oGG-NB-d6t"/>
+                            <constraint firstItem="tlA-er-ffG" firstAttribute="top" secondItem="EBa-on-sVV" secondAttribute="top" id="xdJ-te-sUB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EBa-on-sVV"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="JJw-gH-iFx" id="0hG-ZI-6eh"/>
+                        <outlet property="segmentControl" destination="A3x-FH-VNc" id="e4o-rw-0hx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="teT-Ta-COA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4249" y="-404"/>
         </scene>
     </scenes>
     <resources>
