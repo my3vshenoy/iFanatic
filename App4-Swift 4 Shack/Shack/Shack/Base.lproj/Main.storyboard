@@ -99,7 +99,7 @@
                                 <rect key="frame" x="281" y="107" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="q21-vJ-vzy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="q21-vJ-vzy" customClass="CircularImage" customModule="Shack" customModuleProvider="target">
                                 <rect key="frame" x="16" y="678" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="iY3-Va-HPj"/>
@@ -178,6 +178,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="nAm-yY-k1o" id="8ek-aU-zYB"/>
+                        <outlet property="profileImgView" destination="q21-vJ-vzy" id="bFQ-ly-fgo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k7t-T6-AOV" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -108,6 +108,8 @@ class SignUpVC: UIViewController {
         let b = CGFloat(arc4random_uniform(255))/255
         
         self.bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        self.avatarColor = "[\(r), \(g), \(b), 1]"
+       // UserDataService.instance.avatarColor = self.avatarColor
         UIView.animate(withDuration: 0.2) {
             self.profileImgView.backgroundColor = self.bgColor
         }

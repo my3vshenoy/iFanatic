@@ -30,7 +30,7 @@ class AuthService{
             return defaults.value(forKey: TOKEN_KEY) as! String
         }
         set{
-            defaults.value(forKey: TOKEN_KEY)
+            defaults.set(newValue, forKey: TOKEN_KEY)
         }
     }
     
@@ -39,7 +39,7 @@ class AuthService{
             return defaults.value(forKey: USER_EMAIL) as! String
         }
         set{
-            defaults.value(forKey: USER_EMAIL)
+            defaults.set(newValue, forKey: USER_EMAIL)
         }
     }
     
@@ -79,18 +79,12 @@ class AuthService{
         Alamofire.request(URL_USER_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON
             {(response) in
                 if response.result.error == nil{
-                    if let json = response.result.value as? Dictionary<String,Any>
-                    {
-                        if let email = json["user"] as? String{
-                            self.userEmail = email
-                        }
-                        
-                        if let token = json["token"] as? String{
-                            self.authToken = token
-                        }
-                        
-                        self.isLoggedIn = true
-                    }
+                    guard let data = response.data else { return }
+                    if let json = try? JSON(data: data){
+                    self.userEmail = json["user"].stringValue
+                    self.authToken = json["token"].stringValue
+                    
+                    self.isLoggedIn = true
                     completion(true)
                 }
                 else{
@@ -99,7 +93,7 @@ class AuthService{
                 }
         }
     }
-    
+    }
     func createUser(name: String, email: String, avatarName: String, avatarColor: String,  completion: @escaping CompletionHandler){
         
         let lowerCaseEmail = email.lowercased()
