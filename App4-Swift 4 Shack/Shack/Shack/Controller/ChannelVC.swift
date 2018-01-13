@@ -21,6 +21,12 @@ class ChannelVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_CHANGED, object: nil)
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
     @IBAction func loginBtnPressed(_ sender: Any) {
         
         if AuthService.instance.isLoggedIn{
@@ -34,6 +40,7 @@ class ChannelVC: UIViewController {
         }
     }
     
+    //UNWIND
     @IBAction func prepareForUnwind(segue:UIStoryboardSegue){
         
     }
@@ -41,6 +48,19 @@ class ChannelVC: UIViewController {
     
     //Notification selector: What should happen on receiving a broadcast
     @objc func userDataDidChange(_ notif:NSNotification){
+        if AuthService.instance.isLoggedIn{
+            loginBtn.setTitle(UserDataService.instance.name, for: .normal)
+            profileImgView.image = UIImage(named: UserDataService.instance.avatarName)
+            profileImgView.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
+        }
+        else{
+            loginBtn.setTitle("Login", for: .normal)
+            profileImgView.image = UIImage(named: "menuProfileIcon")
+            profileImgView.backgroundColor = UIColor.clear
+        }
+    }
+    
+    func setUpUserInfo(){
         if AuthService.instance.isLoggedIn{
             loginBtn.setTitle(UserDataService.instance.name, for: .normal)
             profileImgView.image = UIImage(named: UserDataService.instance.avatarName)

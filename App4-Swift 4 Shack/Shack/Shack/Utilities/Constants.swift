@@ -13,9 +13,11 @@ let BASE_URL: String = "https://shackslack.herokuapp.com/v1"
 let URL_REGISTER: String = BASE_URL + "/account/register"
 let URL_USER_LOGIN: String = BASE_URL + "/account/login"
 let URL_USER_ADD: String = BASE_URL + "/user/add"
+let URL_USER_BY_EMAIL = BASE_URL + "/user/byEmail/"
 
 //MARK: Headers
 let HEADER = ["Content-Type": "application/json; charset=utf-8"]
+let BEARER_HEADER = ["Authorization": "Bearer \(AuthService.instance.authToken)", "Content-Type": "application/json; charset=utf-8"]
 
 
 //MARK: Aliases
@@ -32,6 +34,7 @@ let TO_CHOOSE_AVATAR = "toChooseAvatar"
 let TOKEN_KEY = "token"
 let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
+
 
 //MARK: Notification Constants
 let NOTIF_USER_DATA_CHANGED = Notification.Name("NotifUserDataChanged")

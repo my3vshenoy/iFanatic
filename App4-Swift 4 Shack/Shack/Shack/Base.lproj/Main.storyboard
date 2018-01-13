@@ -286,7 +286,14 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtnPressed:" destination="rN7-x4-3Hx" eventType="touchUpInside" id="rzs-hi-ibW"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="4CA-eD-Udd">
+                                <rect key="frame" x="169" y="287.66666666666669" width="37" height="37"/>
+                                <color key="color" red="0.29411764709999999" green="0.46666666670000001" blue="0.87104524100000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -298,11 +305,18 @@
                             <constraint firstItem="zmz-Xx-ZQg" firstAttribute="top" secondItem="Zzs-1F-Tkx" secondAttribute="top" constant="60" id="F1V-gb-uhb"/>
                             <constraint firstItem="szV-V6-77y" firstAttribute="top" secondItem="zmz-Xx-ZQg" secondAttribute="bottom" constant="40" id="PuL-57-abD"/>
                             <constraint firstItem="OLw-3r-OKg" firstAttribute="top" secondItem="Zzs-1F-Tkx" secondAttribute="top" id="Qah-vh-D7w"/>
+                            <constraint firstItem="4CA-eD-Udd" firstAttribute="centerX" secondItem="3r5-EC-TRf" secondAttribute="centerX" id="jvf-aG-lY9"/>
+                            <constraint firstItem="4CA-eD-Udd" firstAttribute="centerY" secondItem="3r5-EC-TRf" secondAttribute="centerY" constant="-100" id="ovp-85-yiY"/>
                             <constraint firstItem="Zzs-1F-Tkx" firstAttribute="trailing" secondItem="OLw-3r-OKg" secondAttribute="trailing" constant="16" id="tgh-Px-eQd"/>
                             <constraint firstItem="emp-px-1qh" firstAttribute="top" secondItem="szV-V6-77y" secondAttribute="bottom" constant="40" id="y4M-kH-eVF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zzs-1F-Tkx"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="4CA-eD-Udd" id="on5-dU-pFu"/>
+                        <outlet property="passwordTxtField" destination="PDF-Xs-71d" id="sqi-RX-p8c"/>
+                        <outlet property="usernameTxtField" destination="AzJ-wq-wei" id="due-kI-NUK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vmd-ML-KkQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
