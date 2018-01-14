@@ -64,7 +64,6 @@
                                         <connections>
                                             <outlet property="categoryImgView" destination="l7M-eo-Ydc" id="4hu-aG-WW6"/>
                                             <outlet property="categoryTitle" destination="KdA-RH-Rdk" id="aao-Ce-rwF"/>
-                                            <segue destination="7jp-ZI-rhk" kind="show" id="U9i-WY-5Nl"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -84,6 +83,7 @@
                     <navigationItem key="navigationItem" title="CODERSWAG" id="rKw-ry-yVK"/>
                     <connections>
                         <outlet property="categoryTableView" destination="fXy-zK-W1U" id="I8n-MT-VYC"/>
+                        <segue destination="7jp-ZI-rhk" kind="show" identifier="ProductsVC" id="lq2-5L-edd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -108,17 +108,17 @@
                                 <rect key="frame" x="0.0" y="126" width="320" height="442"/>
                                 <color key="backgroundColor" red="0.96068984270095825" green="0.96085053682327271" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="sgd-pD-V1V">
-                                    <size key="itemSize" width="147" height="225"/>
+                                    <size key="itemSize" width="147" height="217"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="nSt-M0-DIu" customClass="ProductCell" customModule="CoderSwag" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="147" height="225"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="147" height="217"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="147" height="225"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="147" height="217"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shirt01" translatesAutoresizingMaskIntoConstraints="NO" id="aeg-Ac-c6L">
@@ -128,12 +128,12 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Devslopes Logo Graphic T-Shirt" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PaV-E3-KLj">
-                                                    <rect key="frame" x="12" y="160" width="135" height="33.5"/>
+                                                    <rect key="frame" x="12" y="155" width="135" height="40"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="$13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xT-qn-65j">
-                                                    <rect key="frame" x="13" y="203" width="114" height="14"/>
+                                                    <rect key="frame" x="13" y="195" width="114" height="14"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="10"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -143,12 +143,12 @@
                                         <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailingMargin" secondItem="0xT-qn-65j" secondAttribute="trailing" constant="12" id="7iF-cD-PZF"/>
-                                            <constraint firstItem="0xT-qn-65j" firstAttribute="top" secondItem="PaV-E3-KLj" secondAttribute="bottom" constant="9.5" id="TWN-V3-0gh"/>
+                                            <constraint firstItem="0xT-qn-65j" firstAttribute="top" secondItem="PaV-E3-KLj" secondAttribute="bottom" id="TWN-V3-0gh"/>
                                             <constraint firstItem="0xT-qn-65j" firstAttribute="bottom" secondItem="nSt-M0-DIu" secondAttribute="bottomMargin" id="Tcq-me-RSg"/>
                                             <constraint firstItem="0xT-qn-65j" firstAttribute="leading" secondItem="nSt-M0-DIu" secondAttribute="leadingMargin" constant="5" id="Tfz-dy-g5T"/>
                                             <constraint firstAttribute="trailing" secondItem="PaV-E3-KLj" secondAttribute="trailing" id="U3R-RB-BJ1"/>
                                             <constraint firstItem="PaV-E3-KLj" firstAttribute="leading" secondItem="nSt-M0-DIu" secondAttribute="leading" constant="12" id="WLX-0F-TJe"/>
-                                            <constraint firstItem="PaV-E3-KLj" firstAttribute="top" secondItem="aeg-Ac-c6L" secondAttribute="bottom" constant="10" id="aVN-Xj-ohO"/>
+                                            <constraint firstItem="PaV-E3-KLj" firstAttribute="top" secondItem="aeg-Ac-c6L" secondAttribute="bottom" constant="5" id="aVN-Xj-ohO"/>
                                             <constraint firstItem="aeg-Ac-c6L" firstAttribute="top" secondItem="nSt-M0-DIu" secondAttribute="top" id="vTq-Xp-HhY"/>
                                             <constraint firstAttribute="trailing" secondItem="aeg-Ac-c6L" secondAttribute="trailing" id="xm4-WX-Uoz"/>
                                             <constraint firstItem="aeg-Ac-c6L" firstAttribute="leading" secondItem="nSt-M0-DIu" secondAttribute="leading" id="zhy-mI-fK4"/>
@@ -174,6 +174,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aML-I3-RVV"/>
                     </view>
+                    <connections>
+                        <outlet property="productsCollectionView" destination="u3m-El-CHn" id="giW-i8-Kgu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waN-77-e6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

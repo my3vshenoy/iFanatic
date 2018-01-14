@@ -67,12 +67,12 @@
 		21D345E9200AC50500E12CAF /* CoderSwag */ = {
 			isa = PBXGroup;
 			children = (
+				21D34602200AC93200E12CAF /* Model */,
+				21D34603200AC93C00E12CAF /* View */,
+				21D345FE200AC54600E12CAF /* Controller */,
+				21D34608200ACCD300E12CAF /* Service */,
 				21D345FF200AC55200E12CAF /* Supporting Files */,
 				21D34600200AC68D00E12CAF /* Main.storyboard */,
-				21D34608200ACCD300E12CAF /* Service */,
-				21D34603200AC93C00E12CAF /* View */,
-				21D34602200AC93200E12CAF /* Model */,
-				21D345FE200AC54600E12CAF /* Controller */,
 			);
 			path = CoderSwag;
 			sourceTree = "<group>";

@@ -41,6 +41,26 @@ class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = DataService.instance.getCategories()[indexPath.row]
+        performSegue(withIdentifier: "ProductsVC", sender: category)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let productsVC = segue.destination as? ProductsVC{
+            //Change the appearance of the back button on the products page
+            let barBtn = UIBarButtonItem()
+            barBtn.title = ""
+            navigationItem.backBarButtonItem = barBtn
+            
+            //Adding a protection during build time. If the type is not a category, assert will crash the app and we can catch it at build time
+            assert(sender as? Category != nil)
+            productsVC.initializeProducts(category: sender as! Category)
+        }
+    }
+    
 
 }
 
