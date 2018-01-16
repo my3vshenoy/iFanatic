@@ -10,15 +10,16 @@ import UIKit
 
 class GoalCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var goalDescriptionLbl: UILabel!
+    @IBOutlet weak var goalProgressLbl: UILabel!
+    @IBOutlet weak var goalTypeLbl: UILabel!
+    
+    func configureCell(description: String, type: String, progressAmt: Int){
+        self.goalDescriptionLbl.text = description
+        self.goalTypeLbl.text = type
+        //String(describing: ) -> Gets the textual value of an Int
+        self.goalProgressLbl.text = String(describing:progressAmt)
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
 }
