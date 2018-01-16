@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21C40B11200D4F1F0010B0DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C40B10200D4F1F0010B0DC /* AppDelegate.swift */; };
+		21C40B13200D4F1F0010B0DC /* FlightsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C40B12200D4F1F0010B0DC /* FlightsVC.swift */; };
+		21C40B16200D4F1F0010B0DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C40B14200D4F1F0010B0DC /* Main.storyboard */; };
+		21C40B19200D4F1F0010B0DC /* JetSetFlight.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21C40B17200D4F1F0010B0DC /* JetSetFlight.xcdatamodeld */; };
+		21C40B1B200D4F1F0010B0DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C40B1A200D4F1F0010B0DC /* Assets.xcassets */; };
+		21C40B1E200D4F1F0010B0DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C40B1C200D4F1F0010B0DC /* LaunchScreen.storyboard */; };
+		21C40B2B200D53730010B0DC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C40B2A200D53730010B0DC /* Constants.swift */; };
+		21C40B2D200D545A0010B0DC /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C40B2C200D545A0010B0DC /* DataService.swift */; };
+		21C40B2F200D86650010B0DC /* FlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C40B2E200D86650010B0DC /* FlightCell.swift */; };
+		21C40B31200D87710010B0DC /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C40B30200D87710010B0DC /* Flight.swift */; };
+		21C40B33200DA8BF0010B0DC /* FlightDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C40B32200DA8BF0010B0DC /* FlightDetailsVC.swift */; };
+		21C40B37200DFC070010B0DC /* Airline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C40B36200DFC070010B0DC /* Airline.swift */; };
+		21C40B39200E2E6B0010B0DC /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C40B38200E2E6B0010B0DC /* RoundedButton.swift */; };
+		5D1B8440BB05FC045E6960A6 /* Pods_JetSetFlight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC5A23C1F6020CDE84BCD4D /* Pods_JetSetFlight.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		21C40B0D200D4F1F0010B0DC /* JetSetFlight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JetSetFlight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21C40B10200D4F1F0010B0DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		21C40B12200D4F1F0010B0DC /* FlightsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsVC.swift; sourceTree = "<group>"; };
+		21C40B15200D4F1F0010B0DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		21C40B18200D4F1F0010B0DC /* JetSetFlight.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JetSetFlight.xcdatamodel; sourceTree = "<group>"; };
+		21C40B1A200D4F1F0010B0DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		21C40B1D200D4F1F0010B0DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		21C40B1F200D4F1F0010B0DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21C40B2A200D53730010B0DC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		21C40B2C200D545A0010B0DC /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		21C40B2E200D86650010B0DC /* FlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCell.swift; sourceTree = "<group>"; };
+		21C40B30200D87710010B0DC /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		21C40B32200DA8BF0010B0DC /* FlightDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsVC.swift; sourceTree = "<group>"; };
+		21C40B36200DFC070010B0DC /* Airline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airline.swift; sourceTree = "<group>"; };
+		21C40B38200E2E6B0010B0DC /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		9BC5A23C1F6020CDE84BCD4D /* Pods_JetSetFlight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JetSetFlight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3D618A251C90A57E8845ADF /* Pods-JetSetFlight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetSetFlight.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JetSetFlight/Pods-JetSetFlight.debug.xcconfig"; sourceTree = "<group>"; };
+		ED1DBABCBC5BAFE9221ADEF2 /* Pods-JetSetFlight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JetSetFlight.release.xcconfig"; path = "Pods/Target Support Files/Pods-JetSetFlight/Pods-JetSetFlight.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21C40B0A200D4F1F0010B0DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D1B8440BB05FC045E6960A6 /* Pods_JetSetFlight.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21C40B04200D4F1F0010B0DC = {
+			isa = PBXGroup;
+			children = (
+				21C40B0F200D4F1F0010B0DC /* JetSetFlight */,
+				21C40B0E200D4F1F0010B0DC /* Products */,
+				ECCF81E9637FBB4A5218C77B /* Pods */,
+				3BA441F69307B0EAABA7E2F8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		21C40B0E200D4F1F0010B0DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21C40B0D200D4F1F0010B0DC /* JetSetFlight.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21C40B0F200D4F1F0010B0DC /* JetSetFlight */ = {
+			isa = PBXGroup;
+			children = (
+				21C40B29200D50030010B0DC /* Utilities */,
+				21C40B28200D4FFC0010B0DC /* Services */,
+				21C40B27200D4FF50010B0DC /* Model */,
+				21C40B26200D4FEF0010B0DC /* View */,
+				21C40B25200D4FE00010B0DC /* Controller */,
+				21C40B10200D4F1F0010B0DC /* AppDelegate.swift */,
+				21C40B14200D4F1F0010B0DC /* Main.storyboard */,
+				21C40B1A200D4F1F0010B0DC /* Assets.xcassets */,
+				21C40B1C200D4F1F0010B0DC /* LaunchScreen.storyboard */,
+				21C40B1F200D4F1F0010B0DC /* Info.plist */,
+				21C40B17200D4F1F0010B0DC /* JetSetFlight.xcdatamodeld */,
+			);
+			path = JetSetFlight;
+			sourceTree = "<group>";
+		};
+		21C40B25200D4FE00010B0DC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21C40B32200DA8BF0010B0DC /* FlightDetailsVC.swift */,
+				21C40B12200D4F1F0010B0DC /* FlightsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		21C40B26200D4FEF0010B0DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21C40B2E200D86650010B0DC /* FlightCell.swift */,
+				21C40B38200E2E6B0010B0DC /* RoundedButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21C40B27200D4FF50010B0DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21C40B30200D87710010B0DC /* Flight.swift */,
+				21C40B36200DFC070010B0DC /* Airline.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21C40B28200D4FFC0010B0DC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				21C40B2C200D545A0010B0DC /* DataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		21C40B29200D50030010B0DC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				21C40B2A200D53730010B0DC /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3BA441F69307B0EAABA7E2F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BC5A23C1F6020CDE84BCD4D /* Pods_JetSetFlight.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECCF81E9637FBB4A5218C77B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3D618A251C90A57E8845ADF /* Pods-JetSetFlight.debug.xcconfig */,
+				ED1DBABCBC5BAFE9221ADEF2 /* Pods-JetSetFlight.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		21C40B0C200D4F1F0010B0DC /* JetSetFlight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21C40B22200D4F1F0010B0DC /* Build configuration list for PBXNativeTarget "JetSetFlight" */;
+			buildPhases = (
+				2698FA98712EF5409556671C /* [CP] Check Pods Manifest.lock */,
+				21C40B09200D4F1F0010B0DC /* Sources */,
+				21C40B0A200D4F1F0010B0DC /* Frameworks */,
+				21C40B0B200D4F1F0010B0DC /* Resources */,
+				EDB387819E3F0C4D6411D7EB /* [CP] Embed Pods Frameworks */,
+				B9062E9671EBC1032228679F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JetSetFlight;
+			productName = JetSetFlight;
+			productReference = 21C40B0D200D4F1F0010B0DC /* JetSetFlight.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21C40B05200D4F1F0010B0DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = com.aarven;
+				TargetAttributes = {
+					21C40B0C200D4F1F0010B0DC = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 21C40B08200D4F1F0010B0DC /* Build configuration list for PBXProject "JetSetFlight" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 21C40B04200D4F1F0010B0DC;
+			productRefGroup = 21C40B0E200D4F1F0010B0DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				21C40B0C200D4F1F0010B0DC /* JetSetFlight */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21C40B0B200D4F1F0010B0DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21C40B1E200D4F1F0010B0DC /* LaunchScreen.storyboard in Resources */,
+				21C40B1B200D4F1F0010B0DC /* Assets.xcassets in Resources */,
+				21C40B16200D4F1F0010B0DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2698FA98712EF5409556671C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B9062E9671EBC1032228679F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JetSetFlight/Pods-JetSetFlight-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDB387819E3F0C4D6411D7EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JetSetFlight/Pods-JetSetFlight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21C40B09200D4F1F0010B0DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21C40B13200D4F1F0010B0DC /* FlightsVC.swift in Sources */,
+				21C40B39200E2E6B0010B0DC /* RoundedButton.swift in Sources */,
+				21C40B2F200D86650010B0DC /* FlightCell.swift in Sources */,
+				21C40B19200D4F1F0010B0DC /* JetSetFlight.xcdatamodeld in Sources */,
+				21C40B11200D4F1F0010B0DC /* AppDelegate.swift in Sources */,
+				21C40B2B200D53730010B0DC /* Constants.swift in Sources */,
+				21C40B33200DA8BF0010B0DC /* FlightDetailsVC.swift in Sources */,
+				21C40B2D200D545A0010B0DC /* DataService.swift in Sources */,
+				21C40B37200DFC070010B0DC /* Airline.swift in Sources */,
+				21C40B31200D87710010B0DC /* Flight.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		21C40B14200D4F1F0010B0DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21C40B15200D4F1F0010B0DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		21C40B1C200D4F1F0010B0DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21C40B1D200D4F1F0010B0DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21C40B20200D4F1F0010B0DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		21C40B21200D4F1F0010B0DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		21C40B23200D4F1F0010B0DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3D618A251C90A57E8845ADF /* Pods-JetSetFlight.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JetSetFlight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aarven.JetSetFlight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21C40B24200D4F1F0010B0DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED1DBABCBC5BAFE9221ADEF2 /* Pods-JetSetFlight.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JetSetFlight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = aarven.JetSetFlight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21C40B08200D4F1F0010B0DC /* Build configuration list for PBXProject "JetSetFlight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21C40B20200D4F1F0010B0DC /* Debug */,
+				21C40B21200D4F1F0010B0DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21C40B22200D4F1F0010B0DC /* Build configuration list for PBXNativeTarget "JetSetFlight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21C40B23200D4F1F0010B0DC /* Debug */,
+				21C40B24200D4F1F0010B0DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		21C40B17200D4F1F0010B0DC /* JetSetFlight.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				21C40B18200D4F1F0010B0DC /* JetSetFlight.xcdatamodel */,
+			);
+			currentVersion = 21C40B18200D4F1F0010B0DC /* JetSetFlight.xcdatamodel */;
+			path = JetSetFlight.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 21C40B05200D4F1F0010B0DC /* Project object */;
+}
