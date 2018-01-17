@@ -14,6 +14,9 @@
 		21C40AF4200C15CC0010B0DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C40AF3200C15CC0010B0DC /* Assets.xcassets */; };
 		21C40AF7200C15CC0010B0DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C40AF5200C15CC0010B0DC /* LaunchScreen.storyboard */; };
 		21C40B03200C24A30010B0DC /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C40B02200C24A30010B0DC /* GoalCell.swift */; };
+		21F5E0A6200FD38E00C52FF7 /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F5E0A5200FD38E00C52FF7 /* GoalType.swift */; };
+		21F5E0A8200FDAF100C52FF7 /* CreateGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F5E0A7200FDAF100C52FF7 /* CreateGoalVC.swift */; };
+		21F5E0AA200FE2D100C52FF7 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F5E0A9200FE2D100C52FF7 /* UIViewControllerExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		21C40AF6200C15CC0010B0DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21C40AF8200C15CC0010B0DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21C40B02200C24A30010B0DC /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
+		21F5E0A5200FD38E00C52FF7 /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
+		21F5E0A7200FDAF100C52FF7 /* CreateGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalVC.swift; sourceTree = "<group>"; };
+		21F5E0A9200FE2D100C52FF7 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				21C40AEB200C15CC0010B0DC /* GoalsVC.swift */,
+				21F5E0A7200FDAF100C52FF7 /* CreateGoalVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -91,6 +98,7 @@
 		21C40B00200C15E90010B0DC /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				21F5E0A9200FE2D100C52FF7 /* UIViewControllerExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -98,6 +106,7 @@
 		21C40B01200C160E0010B0DC /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				21F5E0A5200FD38E00C52FF7 /* GoalType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -175,8 +184,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				21C40B03200C24A30010B0DC /* GoalCell.swift in Sources */,
+				21F5E0A8200FDAF100C52FF7 /* CreateGoalVC.swift in Sources */,
+				21F5E0A6200FD38E00C52FF7 /* GoalType.swift in Sources */,
 				21C40AEC200C15CC0010B0DC /* GoalsVC.swift in Sources */,
 				21C40AEA200C15CC0010B0DC /* AppDelegate.swift in Sources */,
+				21F5E0AA200FE2D100C52FF7 /* UIViewControllerExt.swift in Sources */,
 				21C40AF2200C15CC0010B0DC /* Goal_Post.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
