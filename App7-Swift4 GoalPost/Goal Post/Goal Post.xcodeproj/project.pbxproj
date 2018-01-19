@@ -19,6 +19,7 @@
 		21F5E0AA200FE2D100C52FF7 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F5E0A9200FE2D100C52FF7 /* UIViewControllerExt.swift */; };
 		21F5E0AC200FE77100C52FF7 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F5E0AB200FE77100C52FF7 /* UIViewExt.swift */; };
 		21F5E0AE2011754400C52FF7 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F5E0AD2011754400C52FF7 /* UIButtonExt.swift */; };
+		21F5E0B02011790C00C52FF7 /* FinishGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F5E0AF2011790C00C52FF7 /* FinishGoalVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		21F5E0A9200FE2D100C52FF7 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		21F5E0AB200FE77100C52FF7 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		21F5E0AD2011754400C52FF7 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
+		21F5E0AF2011790C00C52FF7 /* FinishGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGoalVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				21C40AEB200C15CC0010B0DC /* GoalsVC.swift */,
 				21F5E0A7200FDAF100C52FF7 /* CreateGoalVC.swift */,
+				21F5E0AF2011790C00C52FF7 /* FinishGoalVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				21C40AEA200C15CC0010B0DC /* AppDelegate.swift in Sources */,
 				21F5E0AA200FE2D100C52FF7 /* UIViewControllerExt.swift in Sources */,
 				21F5E0AE2011754400C52FF7 /* UIButtonExt.swift in Sources */,
+				21F5E0B02011790C00C52FF7 /* FinishGoalVC.swift in Sources */,
 				21C40AF2200C15CC0010B0DC /* Goal_Post.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
