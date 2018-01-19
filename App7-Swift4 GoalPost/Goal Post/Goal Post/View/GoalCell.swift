@@ -14,12 +14,11 @@ class GoalCell: UITableViewCell {
     @IBOutlet weak var goalProgressLbl: UILabel!
     @IBOutlet weak var goalTypeLbl: UILabel!
     
-    func configureCell(description: String, type: GoalType, progressAmt: Int){
-        self.goalDescriptionLbl.text = description
-        self.goalTypeLbl.text = type.rawValue
+    func configureCell(goal: Goal){
+        self.goalDescriptionLbl.text = goal.goalDescription
+        self.goalTypeLbl.text = goal.goalType
         //String(describing: ) -> Gets the textual value of an Int
-        self.goalProgressLbl.text = String(describing:progressAmt)
-        
+        self.goalProgressLbl.text = String(describing:goal.goalProgressAmount)
     }
     
 }

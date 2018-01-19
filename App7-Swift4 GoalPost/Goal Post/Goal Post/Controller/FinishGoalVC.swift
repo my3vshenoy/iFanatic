@@ -28,7 +28,7 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
     
     //Initializer for previous controller to store data
     func initData(withDescription: String, type: GoalType){
-        self.goalDescription  = description
+        self.goalDescription  = withDescription
         self.goalType = type
     }
     
@@ -42,7 +42,9 @@ class FinishGoalVC: UIViewController, UITextFieldDelegate {
         if self.pointsTxtField.text != ""{
             self.save { (complete) in
                 if complete{
-                    dismiss(animated: true, completion: nil)
+                    //Go back to GoalsVC on creation of goal
+                    self.presentingViewController?.dismissSecondaryDetail()
+                    //dismiss(animated: true, completion: nil)
                 }
             }
         }
