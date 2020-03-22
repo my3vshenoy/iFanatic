@@ -17,13 +17,10 @@ class LoginController: UIViewController {
         static let titleFontName = "Avenir-Light"
         
         static let emailPlaceHolder = "Email"
-        static let emailTextFieldHeight: CGFloat = 60
+        static let emailImageName = "ic_mail_outline_white_2x"
+        static let passwordPlaceHolder = "Password"
+        static let credentialsTextFieldHeight: CGFloat = 60
         
-        static let imageViewForTextFieldDimensions: CGFloat = 24
-        static let imageViewOpacity: CGFloat = 0.87
-        static let separatorHeight: CGFloat = 0.75
-        
-        static let eight: CGFloat = 8
         static let sixteen: CGFloat = 16
         
         static let topPadding: CGFloat = 40
@@ -41,47 +38,23 @@ class LoginController: UIViewController {
     }()
     
     private lazy var emailContainerView: UIView = {
-        let view = UIView()
-        
-        // Image View Set Up
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "ic_mail_outline_white_2x")
-        imageView.alpha = Constants.imageViewOpacity
-        view.addSubview(imageView)
-        imageView.centerY(inView: view)
-        imageView.anchor(left: view.leftAnchor,
-                         paddingLeft: Constants.sixteen,
-                         width: Constants.imageViewForTextFieldDimensions,
-                         height: Constants.imageViewForTextFieldDimensions)
-        
-        // Email textfield set up
-        view.addSubview(emailTextField)
-        emailTextField.anchor(right: view.rightAnchor,
-                              left: imageView.rightAnchor,
-                              bottom: view.bottomAnchor,
-                              paddingBottom: Constants.eight,
-                              paddingLeft: Constants.eight)
-        emailTextField.centerY(inView: view)
-        
-        // Separator View Setup: The line below the textField
-        let separatorView = UIView()
-        separatorView.backgroundColor = .lightGray
-        view.addSubview(separatorView)
-        separatorView.anchor(right: view.rightAnchor,
-                             left: view.leftAnchor,
-                             bottom: view.bottomAnchor,
-                             paddingLeft: Constants.eight,
-                             height: Constants.separatorHeight)
-        return view
+        return UIView().inputContainerView(forImage: #imageLiteral(resourceName: "ic_mail_outline_white_2x"), textField: emailTextField)
     }()
     
     private let emailTextField: UITextField = {
-        let textField = UITextField()
-        textField.font = UIFont.systemFont(ofSize: Constants.sixteen)
-        textField.textColor = .white
-        textField.keyboardAppearance = .dark
-        textField.attributedPlaceholder = NSAttributedString(string: Constants.emailPlaceHolder, attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
-        return textField
+        let view = UITextField().textField(withPlaceholder: Constants.emailPlaceHolder, isSecureTextEntry: false)
+        view.heightAnchor.constraint(equalToConstant: Constants.credentialsTextFieldHeight).isActive = true
+        return view
+    }()
+    
+    private lazy var passwordContainerView: UIView = {
+        return UIView().inputContainerView(forImage: #imageLiteral(resourceName: "ic_lock_outline_white_2x"), textField: passwordTextField)
+    }()
+    
+    private let passwordTextField: UITextField = {
+        let view = UITextField().textField(withPlaceholder: Constants.passwordPlaceHolder, isSecureTextEntry: true)
+        view.heightAnchor.constraint(equalToConstant: Constants.credentialsTextFieldHeight).isActive = true
+        return view
     }()
     
     // MARK: - View Lifecycle
@@ -100,9 +73,15 @@ private extension LoginController {
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: Constants.topPadding)
         titleLabel.centerX(inView: view)
         
-        // Email Container
-        view.addSubview(emailContainerView)
-        emailContainerView.anchor(top: titleLabel.bottomAnchor, right: view.rightAnchor, left: view.leftAnchor, paddingLeft: Constants.sixteen, paddingRight: Constants.sixteen, height: Constants.emailTextFieldHeight)
-        emailContainerView.centerX(inView: view)
+        let stackView = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView])
+        stackView.distribution = .fillEqually
+        stackView.axis = .vertical
+        view.addSubview(stackView)
+        stackView.anchor(top: titleLabel.bottomAnchor,
+                         right: view.rightAnchor,
+                         left: view.leftAnchor,
+                         paddingTop: Constants.sixteen,
+                         paddingLeft: Constants.sixteen,
+                         paddingRight: Constants.sixteen)
     }
 }
