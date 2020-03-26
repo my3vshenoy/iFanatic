@@ -21,10 +21,14 @@ class LoginController: UIViewController {
         static let passwordPlaceHolder = "Password"
         static let credentialsTextFieldHeight: CGFloat = 60
         
+        static let loginButtonTitle = "Login"
+        static let dontHaveAnAccountButtonTitle = "Don't have an account?  "
+        static let signupTitle = "Sign Up"
+        
         static let sixteen: CGFloat = 16
+        static let twentyFour: CGFloat = 24
         
         static let topPadding: CGFloat = 40
-        static let backgroundColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1.0)
     }
     
     // MARK: - Properties
@@ -57,10 +61,36 @@ class LoginController: UIViewController {
         return view
     }()
     
+    private let loginButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle(Constants.loginButtonTitle, for: .normal)
+        button.setTitleColor(UIColor(white: 1, alpha: 0.5), for: .normal)
+        button.backgroundColor = .mainBlueTint
+        button.layer.cornerRadius = 5
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: Constants.twentyFour)
+        return button
+    }()
+    
+    private let dontHaveAnAccountButton: UIButton = {
+        let button = UIButton(type: .system)
+        
+        let attributedTitle = NSMutableAttributedString(string: Constants.dontHaveAnAccountButtonTitle,
+                                                        attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: Constants.sixteen),
+                                                                     NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+        attributedTitle.append(NSAttributedString(string: Constants.signupTitle,
+                                                  attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: Constants.sixteen),
+                                                               NSAttributedString.Key.foregroundColor: UIColor.mainBlueTint]))
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        button.addTarget(self, action: #selector(handleShowSignUp), for: .touchUpInside)
+
+        return button
+    }()
+    
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Constants.backgroundColor
+        view.backgroundColor = .backgroundColor
         setUpSubViews()
     }
 }
@@ -73,15 +103,23 @@ private extension LoginController {
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: Constants.topPadding)
         titleLabel.centerX(inView: view)
         
-        let stackView = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView])
+        let stackView = UIStackView(arrangedSubviews: [emailContainerView, passwordContainerView, loginButton])
         stackView.distribution = .fillEqually
         stackView.axis = .vertical
         view.addSubview(stackView)
         stackView.anchor(top: titleLabel.bottomAnchor,
                          right: view.rightAnchor,
                          left: view.leftAnchor,
-                         paddingTop: Constants.sixteen,
+                         paddingTop: Constants.topPadding,
                          paddingLeft: Constants.sixteen,
                          paddingRight: Constants.sixteen)
+        stackView.spacing = Constants.twentyFour
+        view.addSubview(dontHaveAnAccountButton)
+        dontHaveAnAccountButton.centerX(inView: view)
+        dontHaveAnAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, height: Constants.twentyFour)
+    }
+    
+    @objc func handleShowSignUp() {
+        
     }
 }
